@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1= title
+    div
+        table
+            thead
+                tr: th Number
+                    th Title
+                    th Manager
+                    th Staff
+                    th Company
+                    th Due Date
+                    th Start Date
+
+
+            tbody
+                each project, i in projects
+                    tr
+                        td=project.number
+                        td=project.title
+                        td=project.manager
+                        td=project.staffNames
+                        td=project.company
+                        td=project.due_date
+                        td=project.start_date
+
+                        
