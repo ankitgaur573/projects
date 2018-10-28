@@ -11,6 +11,7 @@ This is a basic Express MVC with Mongoose.
   - Put your mongo details in model/db.js
   - Import projects.json in your local Mongo
   - npm start
+  - open http://localhost:3000 in your browser
 
 ### Tech
 
