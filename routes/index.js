@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
      */
     projects.find({ "staff": { $elemMatch: { id: 7 } } }, function (error, response) {
         if(error){
-            console.log(error);
+            res.render('error');
         }else{
             console.log(response.length);
             /*
@@ -26,7 +26,7 @@ router.get('/', function(req, res, next) {
                 singleProject.staffNames = staffNames.replace(/^,|,$/g,''); // trim commas
                 return singleProject;
             });
-            console.log(response);
+            res.render('project', { title: 'Projects', projects: response});
         }
 
     });
